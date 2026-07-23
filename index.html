@@ -1,74 +1,127 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amaury Bargas Soler</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
-}
-
-header{
-    background:#0056b3;
-    color:white;
-    text-align:center;
-    padding:50px;
-}
-
-section{
-    max-width:900px;
-    background:white;
-    margin:20px auto;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-h2{
-    color:#0056b3;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tu Nombre | Data Scientist & AI Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <style>
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+    .card-hover { transition: all 0.3s; }
+    .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+  </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-200 font-sans">
 
-<header>
-    <h1>Amaury Bargas Soler</h1>
-    <p>Analista de Planificación</p>
-</header>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">TuNombre</h1>
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#sobre-mi" class="hover:text-blue-400 transition">Sobre mí</a>
+        <a href="#habilidades" class="hover:text-blue-400 transition">Habilidades</a>
+        <a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a>
+        <a href="#contacto" class="hover:text-blue-400 transition">Contacto</a>
+      </div>
+    </div>
+  </nav>
 
-<section>
-    <h2>Sobre mí</h2>
-    <p>
-        Profesional orientado al análisis de datos, planificación estratégica
-        y mejora de procesos.
-    </p>
-</section>
+  <!-- Hero -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-5xl md:text-7xl font-bold leading-tight">Hola, soy <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Tu Nombre</span></h2>
+        <p class="text-2xl mt-4 text-slate-400">Data Scientist & AI Engineer</p>
+        <p class="mt-6 text-lg text-slate-300 max-w-lg">
+          Apasionado por transformar datos en valor mediante Machine Learning, Deep Learning y análisis avanzado. 
+          Construyo soluciones de IA que impactan el negocio.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="#proyectos" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-xl font-semibold transition">Ver Proyectos</a>
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="px-8 py-4 border border-slate-600 hover:border-slate-400 rounded-xl font-semibold transition flex items-center gap-2">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <img src="https://via.placeholder.com/500x500/1e2937/64748b?text=Tu+Foto" alt="Tu Foto" class="rounded-3xl shadow-2xl w-80 md:w-96 border border-slate-700"/>
+      </div>
+    </div>
+  </section>
 
-<section>
-    <h2>Competencias</h2>
-    <ul>
-        <li>Excel Avanzado</li>
-        <li>Power BI</li>
-        <li>Microsoft Access</li>
-        <li>Análisis de Datos</li>
-        <li>Planificación Estratégica</li>
-    </ul>
-</section>
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="py-24 bg-slate-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Sobre Mí</h2>
+      <div class="prose prose-invert max-w-none text-lg text-slate-300">
+        <p>Profesional con +X años de experiencia en análisis de datos e inteligencia artificial...</p>
+        <!-- Añade aquí tu biografía -->
+      </div>
+    </div>
+  </section>
 
-<section>
-    <h2>Proyectos</h2>
-    <p>Desarrollo de dashboards, indicadores de gestión y optimización de procesos.</p>
-</section>
+  <!-- Habilidades -->
+  <section id="habilidades" class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Habilidades Técnicas</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-slate-900 p-6 rounded-2xl card-hover"><h3 class="font-semibold mb-4 text-blue-400">Lenguajes</h3><p class="text-slate-400">Python • SQL • R</p></div>
+        <div class="bg-slate-900 p-6 rounded-2xl card-hover"><h3 class="font-semibold mb-4 text-purple-400">Data Science</h3><p class="text-slate-400">Pandas • NumPy • Matplotlib • Seaborn</p></div>
+        <div class="bg-slate-900 p-6 rounded-2xl card-hover"><h3 class="font-semibold mb-4 text-pink-400">Machine Learning</h3><p class="text-slate-400">Scikit-learn • XGBoost • LightGBM</p></div>
+        <div class="bg-slate-900 p-6 rounded-2xl card-hover"><h3 class="font-semibold mb-4 text-emerald-400">Deep Learning</h3><p class="text-slate-400">TensorFlow • PyTorch • Hugging Face</p></div>
+        <div class="bg-slate-900 p-6 rounded-2xl card-hover"><h3 class="font-semibold mb-4 text-amber-400">Big Data</h3><p class="text-slate-400">Spark • Hadoop • Airflow</p></div>
+        <div class="bg-slate-900 p-6 rounded-2xl card-hover"><h3 class="font-semibold mb-4 text-cyan-400">Cloud & MLOps</h3><p class="text-slate-400">AWS • GCP • Docker • MLflow</p></div>
+      </div>
+    </div>
+  </section>
 
-<section>
-    <h2>Contacto</h2>
-    <p>Email: correo@ejemplo.com</p>
-    <p>LinkedIn: linkedin.com/in/amaury</p>
-</section>
+  <!-- Proyectos -->
+  <section id="proyectos" class="py-24 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Proyectos Destacados</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Proyecto 1 -->
+        <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden card-hover">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+            <i class="fas fa-chart-line text-6xl text-white/80"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Predicción de Churn con ML</h3>
+            <p class="text-slate-400 mt-2 text-sm">Modelo de clasificación con XGBoost + SHAP. Precisión 92%.</p>
+            <div class="flex gap-2 mt-4">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Python</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">XGBoost</span>
+            </div>
+            <a href="https://github.com/tuusuario/proyecto-churn" class="block mt-6 text-blue-400 hover:underline">Ver en GitHub →</a>
+          </div>
+        </div>
 
+        <!-- Añade más proyectos aquí -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-24 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">¡Hablemos!</h2>
+      <p class="text-xl text-slate-400 mb-10">Abierto a nuevas oportunidades y colaboraciones en proyectos de IA.</p>
+      <div class="flex justify-center gap-6 text-4xl">
+        <a href="https://github.com/tuusuario" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/tu-perfil" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:tu@email.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-slate-500 text-sm border-t border-slate-800">
+    © 2026 Tu Nombre • Hecho con ❤️ y mucho café
+  </footer>
+
+  <script>
+    // Tailwind script ya cargado
+  </script>
 </body>
 </html>
