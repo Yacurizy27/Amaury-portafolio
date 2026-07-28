@@ -8,204 +8,213 @@ const profile = {
   github: "https://github.com/AmauryVS",
   cv: "/Amaury-Bargas-CV.pdf",
   image: "/amaury.jpg"
-}
+};
 ---
 
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Amaury Bargas Soler | Analista de Planificación</title>
+<title>{profile.name} | {profile.profession}</title>
 
-https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#050b12;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-padding:20px;
+  background:#050b12;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
 }
 
 .card{
-width:900px;
-background:linear-gradient(
-135deg,
-#00695c,
-#1db7aa
-);
-border-radius:18px;
-padding:40px;
-box-shadow:0 20px 50px rgba(0,0,0,.5);
+  width:100%;
+  max-width:1100px;
+  background:linear-gradient(
+    135deg,
+    #00695c,
+    #1db7aa
+  );
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
 }
 
 .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:50px;
 }
 
 .info{
-flex:1;
-color:white;
+  flex:1;
+  color:white;
 }
 
 .info h1{
-font-size:3rem;
-margin-bottom:10px;
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
 .info h2{
-font-size:1.4rem;
-margin-bottom:20px;
-font-weight:600;
+  font-size:1.4rem;
+  margin-bottom:20px;
+  font-weight:600;
 }
 
 .info p{
-font-size:1.1rem;
-line-height:1.7;
-text-align:justify;
-}
-
-.social{
-margin-top:30px;
-display:flex;
-gap:30px;
-}
-
-.social a{
-color:white;
-font-size:2rem;
-transition:0.3s;
-}
-
-.social a:hover{
-transform:scale(1.2);
-}
-
-.photo{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.photo img{
-width:250px;
-height:250px;
-border-radius:50%;
-object-fit:cover;
-border:6px solid rgba(255,255,255,.15);
+  font-size:1.1rem;
+  line-height:1.7;
+  text-align:justify;
 }
 
 .skills{
-margin-top:25px;
-display:flex;
-flex-wrap:wrap;
-gap:10px;
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
 .skills span{
-background:white;
-color:#00695c;
-padding:8px 14px;
-border-radius:20px;
-font-weight:bold;
-font-size:14px;
+  background:white;
+  color:#00695c;
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.social{
+  margin-top:30px;
+  display:flex;
+  gap:25px;
+}
+
+.social a{
+  color:white;
+  font-size:2rem;
+  transition:.3s;
+}
+
+.social a:hover{
+  transform:scale(1.2);
+}
+
+.photo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.photo img{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid rgba(255,255,255,.2);
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 @media(max-width:768px){
 
-.container{
-flex-direction:column-reverse;
-text-align:center;
-}
+  .container{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
 
-.info p{
-text-align:center;
-}
+  .info h1{
+    font-size:2.2rem;
+  }
 
-.social{
-justify-content:center;
-}
+  .info p{
+    text-align:center;
+  }
 
-.info h1{
-font-size:2.2rem;
-}
+  .skills{
+    justify-content:center;
+  }
 
-.photo img{
-width:200px;
-height:200px;
-}
+  .social{
+    justify-content:center;
+  }
+
+  .photo img{
+    width:220px;
+    height:220px;
+  }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
 
-<div class="container">
+  <div class="container">
 
-<div class="info">
+    <div class="info">
 
-<h1>{profile.name}</h1>
+      <h1>{profile.name}</h1>
 
-<h2>{profile.profession}</h2>
+      <h2>{profile.profession}</h2>
 
-<p>{profile.description}</p>
+      <p>{profile.description}</p>
 
-<div class="skills">
-<span>Power BI</span>
-<span>Excel Avanzado</span>
-<span>SQL</span>
-<span>Microsoft Access</span>
-<span>KPIs</span>
-<span>Dashboards</span>
-<span>Planificación</span>
-<span>Análisis de Datos</span>
-</div>
+      <div class="skills">
+        <span>Power BI</span>
+        <span>Excel Avanzado</span>
+        <span>SQL</span>
+        <span>Microsoft Access</span>
+        <span>KPIs</span>
+        <span>Dashboards</span>
+        <span>Planificación</span>
+        <span>Análisis de Datos</span>
+      </div>
 
-<div class="social">
+      <div class="social">
 
-{profile.linkedin}
-<i class="fab fa-linkedin"></i>
-</a>
+        <a
+          href={profile.linkedin}
+          targetn"></i>
+        </a>
 
-profile.github}
-target="_blank"
-title="GitHub">
-<i class="fab fa-github"></i>
-</a>
+        <a
+          href={profile.github}
+          target="_blank"
+          rel=    <a
+          href={profile.cv}
+          target="_blank"
+           title="Descargar CV"
+        >
+          <i class="fas fa-file-arrow-down"></i>
+        </a>
 
-}
-target="_blank"
-title="Descargar CV">
-<i class="fas fa-file-arrow-down"></i>
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="photo">
+      {profile.image}        alt={profile.name}
+      />
+    </div>
 
-<div class="photo">
-{profile.image}profile.name}/>
-</div>
-
-</div>
+  </div>
 
 </div>
 
