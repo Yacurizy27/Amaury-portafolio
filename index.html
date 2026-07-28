@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tu Nombre | Hoja de Vida</title>
+  <title>Tu Nombre | Perfil Profesional</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,107 +12,180 @@
     
     <!-- HEADER -->
     <header class="header">
-      <div class="avatar">
-        <!-- Reemplaza con tu foto (ponla en la carpeta y cámbiala aquí) -->
-        <img src="foto.jpg" alt="Tu Nombre">
+      <div class="avatar-wrapper">
+        <img src="foto.jpg" alt="Foto profesional" class="avatar">
       </div>
       <div class="header-info">
         <h1>Tu Nombre Completo</h1>
-        <p class="titulo">Desarrollador Full Stack | Ingeniero de Software</p>
+        <p class="titulo">Ingeniero de Software | Desarrollador Full Stack</p>
         <div class="contacto">
-          <a href="mailto:tuemail@gmail.com">📧 tuemail@gmail.com</a>
-          <a href="https://linkedin.com/in/tuusuario" target="_blank">🔗 LinkedIn</a>
-          <a href="https://github.com/tuusuario" target="_blank">💻 GitHub</a>
-          <span>📍 Ciudad, País</span>
+          <a href="mailto:tuemail@gmail.com">
+            <span class="icon">✉</span> tuemail@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/tuusuario" target="_blank">
+            <span class="icon">🔗</span> LinkedIn
+          </a>
+          <a href="https://github.com/tuusuario" target="_blank">
+            <span class="icon">💻</span> GitHub
+          </a>
+          <span><span class="icon">📍</span> Ciudad, País</span>
         </div>
       </div>
     </header>
 
-    <!-- SOBRE MÍ -->
-    <section class="seccion">
-      <h2>Sobre mí</h2>
-      <p>
-        Desarrollador con X años de experiencia en creación de aplicaciones web modernas. 
-        Apasionado por la tecnología, el aprendizaje continuo y resolver problemas reales 
-        con código limpio y escalable. Busco oportunidades donde pueda aportar valor 
-        y seguir creciendo profesionalmente.
-      </p>
-    </section>
-
-    <!-- EXPERIENCIA -->
-    <section class="seccion">
-      <h2>Experiencia Profesional</h2>
+    <main class="content">
       
-      <div class="item">
-        <div class="item-header">
-          <h3>Desarrollador Full Stack</h3>
-          <span class="fecha">Ene 2023 – Presente</span>
+      <!-- SOBRE MÍ -->
+      <section class="seccion">
+        <h2>Sobre mí</h2>
+        <p>
+          Profesional con sólida experiencia en el desarrollo de soluciones tecnológicas 
+          de alto impacto. Especializado en la creación de aplicaciones web modernas, 
+          escalables y centradas en el usuario. Apasionado por la excelencia técnica, 
+          el trabajo en equipo y la mejora continua. Busco contribuir en entornos 
+          desafiantes donde pueda generar valor real y seguir creciendo profesionalmente.
+        </p>
+      </section>
+
+      <!-- EXPERIENCIA -->
+      <section class="seccion">
+        <h2>Experiencia Profesional</h2>
+        
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <h3>Desarrollador Full Stack Senior</h3>
+              <p class="empresa">Nombre de la Empresa</p>
+            </div>
+            <span class="fecha">Ene 2023 – Presente</span>
+          </div>
+          <ul>
+            <li>Lideré el desarrollo de funcionalidades clave que incrementaron la retención de usuarios en un 25%.</li>
+            <li>Diseñé e implementé arquitecturas escalables utilizando React, Node.js, PostgreSQL y AWS.</li>
+            <li>Colaboré en un equipo ágil de 8 personas bajo metodología Scrum, mejorando la entrega continua.</li>
+            <li>Mentoricé a desarrolladores junior y establecí buenas prácticas de código y revisión.</li>
+          </ul>
         </div>
-        <p class="empresa">Nombre de la Empresa · Remoto</p>
-        <ul>
-          <li>Desarrollé e implementé features clave que aumentaron la retención de usuarios en un 25%.</li>
-          <li>Trabajé con React, Node.js, PostgreSQL y AWS.</li>
-          <li>Colaboré en un equipo ágil de 6 personas usando Scrum.</li>
-        </ul>
-      </div>
 
-      <div class="item">
-        <div class="item-header">
-          <h3>Desarrollador Frontend</h3>
-          <span class="fecha">Mar 2021 – Dic 2022</span>
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <h3>Desarrollador Frontend</h3>
+              <p class="empresa">Otra Empresa S.A.</p>
+            </div>
+            <span class="fecha">Mar 2021 – Dic 2022</span>
+          </div>
+          <ul>
+            <li>Construí interfaces responsivas y accesibles con React, TypeScript y Tailwind CSS.</li>
+            <li>Optimicé el rendimiento de la aplicación, reduciendo el tiempo de carga en un 40%.</li>
+            <li>Colaboré estrechamente con diseñadores UX/UI para garantizar una experiencia de usuario excepcional.</li>
+          </ul>
         </div>
-        <p class="empresa">Otra Empresa · Ciudad</p>
-        <ul>
-          <li>Construí interfaces responsivas con React y Tailwind CSS.</li>
-          <li>Mejoré el rendimiento de la aplicación reduciendo el tiempo de carga en un 40%.</li>
-        </ul>
-      </div>
-    </section>
 
-    <!-- EDUCACIÓN -->
-    <section class="seccion">
-      <h2>Educación</h2>
-      <div class="item">
-        <div class="item-header">
-          <h3>Ingeniería de Sistemas / Informática</h3>
-          <span class="fecha">2017 – 2021</span>
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <h3>Desarrollador Junior</h3>
+              <p class="empresa">Startup Tecnológica</p>
+            </div>
+            <span class="fecha">Jun 2019 – Feb 2021</span>
+          </div>
+          <ul>
+            <li>Participé en el desarrollo de módulos frontend y backend de productos SaaS.</li>
+            <li>Implementé integraciones con APIs de terceros y sistemas de autenticación.</li>
+          </ul>
         </div>
-        <p class="empresa">Universidad XYZ</p>
-      </div>
-    </section>
+      </section>
 
-    <!-- HABILIDADES -->
-    <section class="seccion">
-      <h2>Habilidades Técnicas</h2>
-      <div class="skills">
-        <span class="skill">JavaScript</span>
-        <span class="skill">TypeScript</span>
-        <span class="skill">React</span>
-        <span class="skill">Next.js</span>
-        <span class="skill">Node.js</span>
-        <span class="skill">Python</span>
-        <span class="skill">PostgreSQL</span>
-        <span class="skill">MongoDB</span>
-        <span class="skill">Git</span>
-        <span class="skill">Docker</span>
-        <span class="skill">AWS</span>
-        <span class="skill">Tailwind CSS</span>
-      </div>
-    </section>
-
-    <!-- PROYECTOS (opcional pero recomendado) -->
-    <section class="seccion">
-      <h2>Proyectos Destacados</h2>
-      
-      <div class="item">
-        <div class="item-header">
-          <h3>Nombre del Proyecto</h3>
-          <a href="https://tu-proyecto.vercel.app" target="_blank" class="link">Ver demo →</a>
+      <!-- EDUCACIÓN -->
+      <section class="seccion">
+        <h2>Educación</h2>
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <h3>Ingeniería de Sistemas / Informática</h3>
+              <p class="empresa">Universidad Nacional</p>
+            </div>
+            <span class="fecha">2015 – 2020</span>
+          </div>
+          <p class="detalle">Mención honorífica · Promedio: 4.5/5.0</p>
         </div>
-        <p>Descripción corta del proyecto. Tecnologías usadas: React, Node.js, PostgreSQL.</p>
-      </div>
-    </section>
+      </section>
 
+      <!-- HABILIDADES -->
+      <section class="seccion">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <div class="skills">
+              <span class="skill">JavaScript</span>
+              <span class="skill">TypeScript</span>
+              <span class="skill">React</span>
+              <span class="skill">Next.js</span>
+              <span class="skill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <div class="skills">
+              <span class="skill">Node.js</span>
+              <span class="skill">Python</span>
+              <span class="skill">PostgreSQL</span>
+              <span class="skill">MongoDB</span>
+              <span class="skill">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Herramientas & Cloud</h4>
+            <div class="skills">
+              <span class="skill">Git</span>
+              <span class="skill">Docker</span>
+              <span class="skill">AWS</span>
+              <span class="skill">Vercel</span>
+              <span class="skill">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section class="seccion">
+        <h2>Proyectos Destacados</h2>
+        
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <h3>Sistema de Gestión Empresarial</h3>
+              <p class="empresa">React · Node.js · PostgreSQL · AWS</p>
+            </div>
+            <a href="#" target="_blank" class="btn-link">Ver proyecto →</a>
+          </div>
+          <p class="detalle">
+            Plataforma completa de gestión de inventarios y ventas con autenticación, 
+            roles de usuario y reportes en tiempo real.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <h3>Aplicación de E-commerce</h3>
+              <p class="empresa">Next.js · Stripe · MongoDB</p>
+            </div>
+            <a href="#" target="_blank" class="btn-link">Ver demo →</a>
+          </div>
+          <p class="detalle">
+            Tienda online con carrito de compras, pasarela de pagos y panel de administración.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Tu Nombre Completo · Perfil Profesional</p>
+    </footer>
   </div>
 </body>
 </html>
