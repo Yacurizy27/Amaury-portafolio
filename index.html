@@ -2,11 +2,7 @@
 const profile = {
   name: "Amaury Bargas Soler",
   title: "Analista de Planificación",
-  description: `Soy Analista de Planificación con experiencia en análisis de datos,
-  indicadores de gestión, mejora de procesos y generación de reportes ejecutivos.
-  Me especializo en Excel Avanzado, Power BI, SQL y Microsoft Access para transformar
-  información en decisiones estratégicas que impulsen el crecimiento organizacional.`,
-
+  description: `Soy Analista de Planificación con experiencia en análisis de datos, indicadores de gestión, mejora de procesos y generación de reportes ejecutivos. Me especializo en Excel Avanzado, Power BI, SQL y Microsoft Access para transformar información en decisiones estratégicas que impulsen el crecimiento organizacional.`,
   linkedin: "https://linkedin.com/in/amaurybargas",
   github: "https://github.com/AmauryVS",
   cv: "/Amaury_Bargas_CV.pdf",
@@ -18,129 +14,207 @@ const profile = {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{profile.name}</title>
+  
+  <!-- SEO -->
+  <title>{profile.name} | {profile.title}</title>
+  <meta name="description" content={profile.description} />
+  <meta name="author" content={profile.name} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={`${profile.name} | ${profile.title}`} />
+  <meta property="og:description" content={profile.description} />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content={profile.image} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${profile.name} | ${profile.title}`} />
+  <meta name="twitter:description" content={profile.description} />
 </head>
 
 <body>
-  <div class="card">
+  <main class="card">
     <div class="content">
-
+      <!-- Texto -->
       <div class="text-content">
         <h1>{profile.name}</h1>
-        <h3>{profile.title}</h3>
-
-        <p>
+        <h2>{profile.title}</h2>
+        
+        <p class="description">
           {profile.description}
         </p>
 
         <div class="skills">
           <span>Power BI</span>
-          <span>Excel</span>
+          <span>Excel Avanzado</span>
           <span>SQL</span>
-          <span>Access</span>
+          <span>Microsoft Access</span>
           <span>KPI</span>
+          <span>Reportes Ejecutivos</span>
         </div>
 
         <div class="socials">
-          {profile.linkedin}
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-
-           target="_blank">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-
-          <a href={profile.cv} target="_blank">
-    
-      <div class="image-content">
-        {profile.image}={profile.name} />
+          <a href={profile.cv} target="_blank" rel="noopener noreferrer" class="cv-btn">
+            Descargar CV
+          </a>
+        </div>
       </div>
 
+      <!-- Imagen -->
+      <div class="image-content">
+        <img 
+          src={profile.image} 
+          alt={`Foto profesional de ${profile.name}`}
+          width="260"
+          height="260"
+          loading="eager"
+        />
+      </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
 
 <style>
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#0f1117;
-    font-family:Arial,sans-serif;
-}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-.card{
-    background:linear-gradient(135deg,#0a6d65,#17b6a6);
-    width:900px;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f1117;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 20px;
+  }
 
-.content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-}
+  .card {
+    background: linear-gradient(135deg, #0a6d65, #17b6a6);
+    width: 100%;
+    max-width: 920px;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  }
 
-.text-content{
-    color:white;
-    max-width:500px;
-}
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+  }
 
-.text-content h1{
-    margin:0;
-    font-size:42px;
-}
+  .text-content {
+    color: white;
+    max-width: 520px;
+  }
 
-.text-content h3{
-    margin-top:10px;
-    font-weight:400;
-}
+  .text-content h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
 
-.text-content p{
-    line-height:1.7;
-    font-size:18px;
-}
+  .text-content h2 {
+    font-size: 1.35rem;
+    font-weight: 500;
+    opacity: 0.95;
+    margin-bottom: 20px;
+  }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-}
+  .description {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 28px;
+  }
 
-.skills span{
-    background:white;
-    color:#0a6d65;
-    padding:8px 15px;
-    border-radius:20px;
-    font-weight:bold;
-}
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
 
-.socials{
-    margin-top:25px;
-    display:flex;
-    gap:15px;
-}
+  .skills span {
+    background: white;
+    color: #0a6d65;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 
-.socials a{
-    text-decoration:none;
-    background:white;
-    color:#0a6d65;
-    padding:10px 20px;
-    border-radius:8px;
-    font-weight:bold;
-}
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 
-.image-content img{
-    width:260px;
-    height:260px;
-    border-radius:50%;
-    object-fit:cover;
-}
+  .socials a {
+    text-decoration: none;
+    background: white;
+    color: #0a6d65;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+
+  .socials a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .cv-btn {
+    background: #0a3d3a !important;
+    color: white !important;
+  }
+
+  .image-content img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 800px) {
+    .content {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 32px;
+    }
+
+    .text-content {
+      max-width: 100%;
+    }
+
+    .text-content h1 {
+      font-size: 2.1rem;
+    }
+
+    .skills, .socials {
+      justify-content: center;
+    }
+
+    .image-content img {
+      width: 200px;
+      height: 200px;
+    }
+  }
 </style>
